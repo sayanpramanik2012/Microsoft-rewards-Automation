@@ -3,9 +3,32 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import json
+import os
 import time
 import tkinter as tk
 from tkinter import Label, Spinbox, Text, Button, messagebox,ttk
+
+
+SEARCH_DATA_FILE = "search_data.json"
+
+def generate_default_search_data():
+    default_search_data = {
+        "search_texts": [
+            "hello world code in python",
+            "programming languages",
+            "automation technique",
+            "best language in world",
+            "best coding language in world",
+            "best indian language",
+            "best singer in world",
+            "best gaming PC",
+            "youtube hit song",
+            "trending video"
+        ]
+    }
+    with open(SEARCH_DATA_FILE, "w") as json_file:
+        json.dump(default_search_data, json_file, indent=2)
+
 
 def automate_edge(sleep_timer, search_texts,window_size=(800, 600),network_quality="Good"):
     # Set up Edge WebDriver
@@ -63,9 +86,15 @@ def execute_script():
     automate_edge(sleep_timer, user_search_texts, network_quality=network_quality)
     messagebox.showinfo("Success", "Script executed successfully!")
 
+
+# Check if search_data.json exists, if not, generate it
+if not os.path.exists(SEARCH_DATA_FILE):
+    generate_default_search_data()
+    messagebox.showinfo("File Created", "Default search_data.json file created. You can edit it before running the script.")
+
 # Create the GUI window
 root = tk.Tk()
-root.title("Web Automation Script")
+root.title("Microsoft-rewards-Automation")
 
 # Label and Spinbox for Sleep Timer
 Label(root, text="Sleep Timer (seconds):").pack(pady=5)
@@ -85,7 +114,7 @@ with open('search_data.json') as json_file:
 
 # Dropdown selection box for Network Quality
 Label(root, text="Network Quality:").pack(pady=5)
-network_quality_combobox = ttk.Combobox(root, values=["Good", "Moderate", "Poor"])
+network_quality_combobox = ttk.Combobox(root, values=["Good", "Moderate", "Poor"], state="readonly")
 network_quality_combobox.set("Good")
 network_quality_combobox.pack(pady=5)
 
