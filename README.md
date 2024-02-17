@@ -1,5 +1,4 @@
 # Microsoft-rewards-Automation
-# Web Automation Script
 
 ## Overview
 
