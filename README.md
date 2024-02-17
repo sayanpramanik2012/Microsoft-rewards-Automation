@@ -50,8 +50,7 @@ To run the script, execute the following command:
 ```bash
 python main.py
 ```
-
-This will open the Microsoft Edge browser, perform searches on Bing, and close the tabs based on the specified parameters.
+This will open a GUI window with input fields for sleep timer and search texts, allowing users to interact with the script more convenientlyafter clicking execute it will open the Microsoft Edge browser, perform searches on Bing, and close the tabs based on the specified parameters.
 
 ## Configuration
 Edit the search_data.json file to customize the search texts used by the script. Additionally, you can adjust the sleep timer and other parameters directly in the script.
