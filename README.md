@@ -11,8 +11,6 @@ This Python script automates web interactions using the Selenium library. It ope
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Prerequisites
 
