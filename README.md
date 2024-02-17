@@ -20,6 +20,7 @@ Before running the script, ensure you have the following installed:
 - [WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) for Microsoft Edge
 
 ## Installation
+  #Executable available in Release 
 
 1. Clone the repository:
 
