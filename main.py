@@ -2,7 +2,7 @@ from selenium import webdriver
 import json
 import time
 import tkinter as tk
-from tkinter import Label, Spinbox, Text, Button, Scrollbar,messagebox
+from tkinter import Label, Spinbox, Text, Button, messagebox
 
 def automate_edge(sleep_timer, search_texts):
     # Set up Edge WebDriver
@@ -54,7 +54,7 @@ root.title("Web Automation Script")
 
 # Label and Spinbox for Sleep Timer
 Label(root, text="Sleep Timer (seconds):").pack(pady=5)
-sleep_spinbox = Spinbox(root, from_=1, to=50, increment=0.5, width=5)
+sleep_spinbox = Spinbox(root, from_=0.1, to=999.9, increment=0.1, width=5)
 sleep_spinbox.pack(pady=5)
 
 # Label and Text for Search Texts
@@ -66,13 +66,7 @@ search_texts_entry.pack(pady=5)
 with open('search_data.json') as json_file:
     data = json.load(json_file)
     predefined_search_texts = data.get('search_texts', [])
-    formatted_predefined_search_texts = "\n".join(predefined_search_texts)
-    search_texts_entry.insert("1.0", formatted_predefined_search_texts)
-
-# Scrollbar for the Text widget
-scrollbar = Scrollbar(root, command=search_texts_entry.yview)
-scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-search_texts_entry.config(yscrollcommand=scrollbar.set)
+    search_texts_entry.insert("1.0", ",\n".join(predefined_search_texts))
 
 # Execute Button
 execute_button = Button(root, text="Execute Script", command=execute_script)
