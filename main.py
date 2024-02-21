@@ -11,6 +11,7 @@ from tkinter import Label, Spinbox, Text, Button, messagebox, ttk
 
 SEARCH_DATA_FILE = "search_data.json"
 fake = Faker()
+BING_SEARCH_URL = "https://www.bing.com"
 
 def generate_default_search_data():
     random_search_texts = [fake.word() for _ in range(20)]
@@ -37,42 +38,46 @@ def update_sleep_duration(event=None):
         sleep_duration_label.config(text=f"Timeout of 10 seconds will be added on searching the next text")
 
 def automate_edge(sleep_timer, search_texts, window_size=(800, 600), network_quality="Good"):
-    # Set up Edge WebDriver
-    options = webdriver.EdgeOptions()
-    # options.use_chromium = True
-    options.add_experimental_option('excludeSwitches', ['enable-automation'])
-    options.add_experimental_option('useAutomationExtension', False)
-    driver = webdriver.Edge(options=options)
+    try:
+        # Set up Edge WebDriver
+        options = webdriver.EdgeOptions()
+        options.add_experimental_option('excludeSwitches', ['enable-automation'])
+        options.add_experimental_option('useAutomationExtension', False)
+        driver = webdriver.Edge(options=options)
 
-    # Set the window size
-    driver.set_window_size(*window_size)
+        # Set the window size
+        driver.set_window_size(*window_size)
 
-    for search_text in search_texts:
-        # Open a new tab
-        driver.execute_script("window.open('');")
-        driver.switch_to.window(driver.window_handles[1])
+        for search_text in search_texts:
+            # Open a new tab
+            driver.execute_script("window.open('');")
+            driver.switch_to.window(driver.window_handles[1])
 
-        # Open Bing search engine
-        driver.get("https://www.bing.com")
-        # Adjust sleep duration based on network quality
-        if network_quality == "Poor":
-            time.sleep(10)
-        elif network_quality == "Moderate":
-            time.sleep(6)
-        elif network_quality == "Good":
-            time.sleep(4)
+            # Open Bing search engine
+            driver.get(BING_SEARCH_URL)
+            # Adjust sleep duration based on network quality
+            if network_quality == "Poor":
+                time.sleep(10)
+            elif network_quality == "Moderate":
+                time.sleep(6)
+            elif network_quality == "Good":
+                time.sleep(4)
 
-        # Perform the search
-        search_box = driver.find_element("name", "q")
-        search_box.send_keys(search_text)
-        search_box.submit()
+            # Perform the search
+            search_box = driver.find_element("name", "q")
+            search_box.send_keys(search_text)
+            search_box.submit()
 
-        # Wait for the specified time
-        time.sleep(sleep_timer)
+            # Wait for the specified time
+            time.sleep(sleep_timer)
 
-    # Close the original tab
-    driver.switch_to.window(driver.window_handles[0])
-    driver.close()
+        # Close the original tab
+        driver.switch_to.window(driver.window_handles[0])
+        driver.close()
+
+    except Exception as e:
+        # Handle exceptions (customize the error message as needed)
+        messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
 def execute_script():
     # Get user input values
