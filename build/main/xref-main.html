@@ -26,6 +26,7 @@ imports:
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
  &#8226;   <a href="#copyreg">copyreg</a>
+ &#8226;   <a href="#data_handler">data_handler</a>
  &#8226;   <a href="#encodings">encodings</a>
  &#8226;   <a href="#encodings.aliases">encodings.aliases</a>
  &#8226;   <a href="#encodings.ascii">encodings.ascii</a>
@@ -149,12 +150,10 @@ imports:
  &#8226;   <a href="#encodings.uu_codec">encodings.uu_codec</a>
  &#8226;   <a href="#encodings.zlib_codec">encodings.zlib_codec</a>
  &#8226;   <a href="#enum">enum</a>
- &#8226;   <a href="#faker">faker</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#genericpath">genericpath</a>
  &#8226;   <a href="#heapq">heapq</a>
  &#8226;   <a href="#io">io</a>
- &#8226;   <a href="#json">json</a>
  &#8226;   <a href="#keyword">keyword</a>
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
@@ -165,26 +164,19 @@ imports:
  &#8226;   <a href="#pyi_rth__tkinter.py">pyi_rth__tkinter.py</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#pyi_rth_pkgutil.py">pyi_rth_pkgutil.py</a>
- &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#re._casefix">re._casefix</a>
  &#8226;   <a href="#re._compiler">re._compiler</a>
  &#8226;   <a href="#re._constants">re._constants</a>
  &#8226;   <a href="#re._parser">re._parser</a>
  &#8226;   <a href="#reprlib">reprlib</a>
- &#8226;   <a href="#selenium">selenium</a>
- &#8226;   <a href="#selenium.webdriver">selenium.webdriver</a>
  &#8226;   <a href="#sre_compile">sre_compile</a>
  &#8226;   <a href="#sre_constants">sre_constants</a>
  &#8226;   <a href="#sre_parse">sre_parse</a>
  &#8226;   <a href="#stat">stat</a>
- &#8226;   <a href="#string">string</a>
- &#8226;   <a href="#time">time</a>
- &#8226;   <a href="#tkinter">tkinter</a>
- &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
- &#8226;   <a href="#tkinter.ttk">tkinter.ttk</a>
  &#8226;   <a href="#traceback">traceback</a>
  &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#ui">ui</a>
  &#8226;   <a href="#warnings">warnings</a>
  &#8226;   <a href="#weakref">weakref</a>
 
@@ -1376,6 +1368,28 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="automation"></a>
+  <a target="code" href="///S:/Github%20repo/Microsoft-rewards-Automation/automation.py" type="text/plain"><tt>automation</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#constants">constants</a>
+ &#8226;   <a href="#selenium">selenium</a>
+ &#8226;   <a href="#selenium.webdriver">selenium.webdriver</a>
+ &#8226;   <a href="#selenium.webdriver.common.by">selenium.webdriver.common.by</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ui">ui</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="base64"></a>
   <a target="code" href="///D:/Users/sayan/AppData/Local/Programs/Python/Python312/Lib/base64.py" type="text/plain"><tt>base64</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -1916,6 +1930,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="constants"></a>
+  <a target="code" href="///S:/Github%20repo/Microsoft-rewards-Automation/constants.py" type="text/plain"><tt>constants</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imported by:
+    <a href="#automation">automation</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="contextlib"></a>
   <a target="code" href="///D:/Users/sayan/AppData/Local/Programs/Python/Python312/Lib/contextlib.py" type="text/plain"><tt>contextlib</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -2095,6 +2120,25 @@ imports:
 imported by:
     <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#dateutil.tz.win">dateutil.tz.win</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="data_handler"></a>
+  <a target="code" href="///S:/Github%20repo/Microsoft-rewards-Automation/data_handler.py" type="text/plain"><tt>data_handler</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#faker">faker</a>
+ &#8226;   <a href="#json">json</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#ui">ui</a>
 
   </div>
 
@@ -6270,7 +6314,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#faker.config">faker.config</a>
+    <a href="#data_handler">data_handler</a>
+ &#8226;   <a href="#faker.config">faker.config</a>
  &#8226;   <a href="#faker.decode">faker.decode</a>
  &#8226;   <a href="#faker.exceptions">faker.exceptions</a>
  &#8226;   <a href="#faker.factory">faker.factory</a>
@@ -6279,7 +6324,6 @@ imported by:
  &#8226;   <a href="#faker.proxy">faker.proxy</a>
  &#8226;   <a href="#faker.typing">faker.typing</a>
  &#8226;   <a href="#faker.utils">faker.utils</a>
- &#8226;   <a href="#main.py">main.py</a>
 
   </div>
 
@@ -18866,17 +18910,18 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#dateutil.zoneinfo">dateutil.zoneinfo</a>
+    <a href="#data_handler">data_handler</a>
+ &#8226;   <a href="#dateutil.zoneinfo">dateutil.zoneinfo</a>
  &#8226;   <a href="#faker.providers.misc">faker.providers.misc</a>
  &#8226;   <a href="#json.decoder">json.decoder</a>
  &#8226;   <a href="#json.encoder">json.encoder</a>
  &#8226;   <a href="#json.scanner">json.scanner</a>
- &#8226;   <a href="#main.py">main.py</a>
  &#8226;   <a href="#selenium.webdriver.common.selenium_manager">selenium.webdriver.common.selenium_manager</a>
  &#8226;   <a href="#selenium.webdriver.firefox.firefox_profile">selenium.webdriver.firefox.firefox_profile</a>
  &#8226;   <a href="#selenium.webdriver.remote.errorhandler">selenium.webdriver.remote.errorhandler</a>
  &#8226;   <a href="#selenium.webdriver.remote.utils">selenium.webdriver.remote.utils</a>
  &#8226;   <a href="#selenium.webdriver.remote.webdriver">selenium.webdriver.remote.webdriver</a>
+ &#8226;   <a href="#ui">ui</a>
  &#8226;   <a href="#urllib3._request_methods">urllib3._request_methods</a>
  &#8226;   <a href="#urllib3.contrib.emscripten.fetch">urllib3.contrib.emscripten.fetch</a>
  &#8226;   <a href="#urllib3.contrib.emscripten.response">urllib3.contrib.emscripten.response</a>
@@ -19341,6 +19386,7 @@ imported by:
  &#8226;   <a href="#certifi.core">certifi.core</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#data_handler">data_handler</a>
  &#8226;   <a href="#dateutil.tz.tz">dateutil.tz.tz</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#faker.providers.misc">faker.providers.misc</a>
@@ -19392,6 +19438,7 @@ imported by:
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#threading">threading</a>
  &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#ui">ui</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#urllib3.connection">urllib3.connection</a>
  &#8226;   <a href="#urllib3.contrib.emscripten.connection">urllib3.contrib.emscripten.connection</a>
@@ -19762,7 +19809,6 @@ imported by:
  &#8226;   <a href="#faker.providers.ssn.uk_UA">faker.providers.ssn.uk_UA</a>
  &#8226;   <a href="#faker.proxy">faker.proxy</a>
  &#8226;   <a href="#faker.utils.distribution">faker.utils.distribution</a>
- &#8226;   <a href="#main.py">main.py</a>
  &#8226;   <a href="#statistics">statistics</a>
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#urllib3.util.retry">urllib3.util.retry</a>
@@ -20046,7 +20092,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#main.py">main.py</a>
+    <a href="#automation">automation</a>
  &#8226;   <a href="#selenium.common">selenium.common</a>
  &#8226;   <a href="#selenium.types">selenium.types</a>
  &#8226;   <a href="#selenium.webdriver">selenium.webdriver</a>
@@ -20164,7 +20210,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#main.py">main.py</a>
+    <a href="#automation">automation</a>
  &#8226;   <a href="#selenium">selenium</a>
  &#8226;   <a href="#selenium.webdriver.chrome">selenium.webdriver.chrome</a>
  &#8226;   <a href="#selenium.webdriver.chrome.remote_connection">selenium.webdriver.chrome.remote_connection</a>
@@ -20723,7 +20769,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#selenium.webdriver.remote.shadowroot">selenium.webdriver.remote.shadowroot</a>
+    <a href="#automation">automation</a>
+ &#8226;   <a href="#selenium.webdriver.remote.shadowroot">selenium.webdriver.remote.shadowroot</a>
  &#8226;   <a href="#selenium.webdriver.remote.switch_to">selenium.webdriver.remote.switch_to</a>
  &#8226;   <a href="#selenium.webdriver.remote.webdriver">selenium.webdriver.remote.webdriver</a>
  &#8226;   <a href="#selenium.webdriver.remote.webelement">selenium.webdriver.remote.webelement</a>
@@ -22374,7 +22421,6 @@ imported by:
  &#8226;   <a href="#faker.providers.ssn.it_IT">faker.providers.ssn.it_IT</a>
  &#8226;   <a href="#faker.providers.user_agent">faker.providers.user_agent</a>
  &#8226;   <a href="#logging">logging</a>
- &#8226;   <a href="#main.py">main.py</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#nturl2path">nturl2path</a>
  &#8226;   <a href="#selenium.webdriver.remote.remote_connection">selenium.webdriver.remote.remote_connection</a>
@@ -22713,6 +22759,7 @@ imported by:
     <a href="#_datetime">_datetime</a>
  &#8226;   <a href="#_pydatetime">_pydatetime</a>
  &#8226;   <a href="#_strptime">_strptime</a>
+ &#8226;   <a href="#automation">automation</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#dateutil.parser._parser">dateutil.parser._parser</a>
  &#8226;   <a href="#dateutil.tz.tz">dateutil.tz.tz</a>
@@ -22723,7 +22770,6 @@ imported by:
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#logging">logging</a>
- &#8226;   <a href="#main.py">main.py</a>
  &#8226;   <a href="#queue">queue</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#selenium.webdriver.common.service">selenium.webdriver.common.service</a>
@@ -22763,11 +22809,12 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#main.py">main.py</a>
+    <a href="#automation">automation</a>
  &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
  &#8226;   <a href="#tkinter.constants">tkinter.constants</a>
  &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
  &#8226;   <a href="#tkinter.ttk">tkinter.ttk</a>
+ &#8226;   <a href="#ui">ui</a>
 
   </div>
 
@@ -22816,8 +22863,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#main.py">main.py</a>
+    <a href="#automation">automation</a>
  &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#ui">ui</a>
 
   </div>
 
@@ -22833,8 +22881,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#main.py">main.py</a>
- &#8226;   <a href="#tkinter">tkinter</a>
+    <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#ui">ui</a>
 
   </div>
 
@@ -23224,6 +23272,28 @@ imported by:
  &#8226;   <a href="#selenium.webdriver.firefox.options">selenium.webdriver.firefox.options</a>
  &#8226;   <a href="#urllib3._collections">urllib3._collections</a>
  &#8226;   <a href="#urllib3.contrib.emscripten.fetch">urllib3.contrib.emscripten.fetch</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ui"></a>
+  <a target="code" href="///S:/Github%20repo/Microsoft-rewards-Automation/ui.py" type="text/plain"><tt>ui</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#automation">automation</a>
+ &#8226;   <a href="#data_handler">data_handler</a>
+ &#8226;   <a href="#json">json</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
+ &#8226;   <a href="#tkinter.ttk">tkinter.ttk</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
 
   </div>
 
