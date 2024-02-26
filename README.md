@@ -1,4 +1,4 @@
-# Microsoft-rewards-Automation
+# Microsoft-rewards-Automation (Education Purpose Only)
 
 ## Overview
 
